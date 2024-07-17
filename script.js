@@ -6,6 +6,11 @@ const resetButton = document.getElementById('reset');
 let timerInterval;
 let seconds = 0;
 
+startButton.addEventListener('click', startTimer);
+stopButton.addEventListener('click', stopTimer);
+resetButton.addEventListener('click', resetTimer);
+
+
 function startTimer() {
     timerInterval = setInterval(updateTimer, 1000);
 }
@@ -27,9 +32,6 @@ function updateTimer() {
     seconds++;
 }
 
-startButton.addEventListener('click', startTimer);
-stopButton.addEventListener('click', stopTimer);
-resetButton.addEventListener('click', resetTimer);
 
 
 
